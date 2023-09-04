@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Portifólio</title>
+
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li> <a href="./meusProjetos.html" style="text-decoration:none">Meus Projetos</a> </li>
+    </ul>
+  </nav>
+  
+
+  <header>
+    <h1>Meu Portifólio</h1>
+    <div class="rede">
+      <ul>
+        <li>
+          <a href='http://www.instagram.com/_xx_ric_xx_/'>
+            <img src="./assets/img/instagram.png" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- <img src="./assets/img/fundo.jpg" alt="image de um sutap white " /> -->
+    <p>
+      hellow guys, então nesse meu portifólio, irei apresentar sobre a minha
+      vida de um programador de jogos, como estou em aprendizagem, estou indo
+      pro meu um ao e meio de curso de programação, em busca de um sonho de
+      ser um bom programador e poder criar algo proprio ou caso isso não
+      aconteça que possa trabalhar em uma empressa Americana ou por uma
+      empressa da Europa
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Projeto 1</h2>
+        <img src="./assets/img/rpg.jpg" alt="">
+        <p>
+          Nesse projeto, fiz um rpg de cartas, mostrando como um jogo de rpg funcionava nas décadas passadas.
+        </p>
+        <button class="btn-card" onclick="acessarLink01()">Saiba mais</button>
+      </div>
+      <div class="card">
+        <h2>Projeto 2</h2>
+        <img src="./assets/img/mk.jpg" alt="">
+        <p>
+          Nesse projeto, estarei desenvolvendo um jogo muito famoso, conhecido como Mortal Kombat, sendo feito em 2d com      
+          o sub-zero
+        </p>
+        <button class="btn-card" onclick="acessarLink02()">Saiba mais</button>
+      </div>
+      <div class="card">
+        <h2>projeto 3</h2>
+        <img src="./assets/img/controle.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+          voluptatum ducimus unde dignissimos magnam neque consequuntur ad
+
+        </p>
+        <button class="btn-card" onclick="acessarLink01()">Saiba mais</button>
+
+        <!-- <div class="card">
+          <h2>projeto 3</h2>
+          <img src="./assets/img/controle.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            voluptatum ducimus unde dignissimos magnam neque consequuntur ad
+  
+          </p>
+          <button class="btn-card" onclick="acessarLink01()">Saiba mais</button> -->
+      </div>
+    </div>
+
+    <section class="contato">
+      <h2>Formulário de contato</h2>
+
+      <label for="nome">Nome</label>
+      <input type="text" id="nome">
+
+      <label for="telefone">Telefone</label>
+      <input type="text" id="telefone">
+
+      <label for="msg">Mensagem</label>
+      <textarea id="msg"></textarea>
+
+      <button onclick="abrirWhatsaap()">Enviar</button>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    &copy; Os direitos desse site esta reservado ao senhor Ricardo Alexandre
+  </footer>
+
+  <script src="./src/js/script.js"></script>
+</body>
+
+</html>

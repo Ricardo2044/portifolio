@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+
+body {
+    height: 100vh;
+    background: url("../assets/img/fundo.jpg") no-repeat center #000000d5;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+header {
+    padding: 5px 0;
+    margin-bottom: 85px;
+    width: 100vw;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: rgba(252, 252, 252, 0.863);
+}
+
+
+main {
+    width: 60vw;
+    height: 70vh;
+    padding: 25px;
+    background-color: rgba(128, 83, 83, 0.603);
+    overflow-y: scroll;
+    display: flex;
+    border-radius: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.contato {
+    width: 100%;
+    height: 250px;
+    background-color: rgba(255, 0, 0, 0.419);
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+section.contato h2 {
+    text-align: center;
+}
+
+main img {
+    width: 7vw;
+    height: 16vh;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+
+
+main p {
+    font-family: 'Quicksand', 'sans-serif';
+    font-weight: 600;
+    line-height: 23px;
+    text-align: justify;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 8px;
+}
+
+/* form input, form label{
+    width: 40%;
+} */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+th,
+td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+div.cards {
+    padding: 20px 50px;
+    margin: 30px 0;
+    background-color: #ffffff87;
+    border-radius: 10px;
+    display: flex;
+    gap: 50px;
+}
+
+
+div.cards img {
+    width: 100%;
+    height: auto;
+}
+
+div.cards button.btn-card {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(128, 83, 83, 0.603);
+    font-weight: 700;
+    font-size: 1.3em;
+    color: none;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    width: 78vw;
+    background-color: rgba(5, 4, 4, 0.836);
+    padding: 10px 30px;
+    text-align: center;
+    color: rgba(245, 5, 5, 0.856);
+
+}
+
+nav {
+    padding: 5px 0;
+    width: 100vw;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: rgba(17, 17, 17, 0.863);
+    list-style: none;
+    outline: #4285f4;
+}
+
+nav li a:hover {
+    color: #4285f4;
+}
+
+nav li a {
+    color: rgb(247, 248, 244);
+    transition: .5s;
+}

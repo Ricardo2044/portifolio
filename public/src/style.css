@@ -9,7 +9,7 @@
 
 
 body {
-    height: 99vh;
+    height: 100vh;
     background: url("../assets/img/fundo.jpg") no-repeat center #000000d5;
     background-size: cover;
     display: flex;

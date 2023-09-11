@@ -15,7 +15,7 @@
     },
     {
         "id": "03",
-        "imagem": "./assets/img/dino.png",
+        "imagem": "./assets/img/dino1.png",
         "nome": "Dino Google",
         "descricao": "Jogo do dino feito em JS",
         "link": "http://github.com/Ricardo2044"

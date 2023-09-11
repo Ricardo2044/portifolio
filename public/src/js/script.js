@@ -43,5 +43,6 @@ fetch('http://localhost:5200/projetos')
         console.error('Erro ao buscar projetos:', error);
     });
 
+    
 
 

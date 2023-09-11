@@ -12,7 +12,7 @@ const acessarLink02 = () => {
 // button.addEventListener("click", acessarLink01);
 
 const abrirWhatsaap = () => {
-    let number = "5521994627896";
+    let number = "5521990305811";
 
     let msg = document.getElementById("msg").value;
 

@@ -78,7 +78,7 @@ form {
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    gap: 8px;
+    gap: 4px;
 }
 
 /* form input, form label{

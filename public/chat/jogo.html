@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jogo de Adivinhação de Cores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #header {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .color-box {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    #color-name {
+      font-size: 18px;
+      margin: 10px;
+    }
+
+    #guess-input {
+      font-size: 16px;
+      padding: 5px;
+    }
+
+    #check-button {
+      font-size: 16px;
+      padding: 5px 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">Adivinhe a Cor!</div>
+  <div class="color-box" id="color-box"></div>
+  <div id="color-name"></div>
+  <input type="text" id="guess-input" placeholder="Digite o nome da cor">
+  <button id="check-button" onclick="checkColor()">Verificar</button>
+
+  <script>
+    var colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+    var colorBox = document.getElementById("color-box");
+    var colorName = document.getElementById("color-name");
+    var guessInput = document.getElementById("guess-input");
+
+    function getRandomColor() {
+      var randomIndex = Math.floor(Math.random() * colors.length);
+      return colors[randomIndex];
+    }
+
+    function startGame() {
+      var randomColor = getRandomColor();
+      colorBox.style.backgroundColor = randomColor;
+      colorName.textContent = "";
+    }
+
+    function checkColor() {
+      var userGuess = guessInput.value.toLowerCase();
+      var correctColor = colorBox.style.backgroundColor;
+
+      if (userGuess === correctColor) {
+        colorName.textContent = "Parabéns! Você acertou!";
+        colorName.style.color = "green";
+      } else {
+        colorName.textContent = "Tente novamente.";
+        colorName.style.color = "red";
+      }
+    }
+
+    startGame(); // Inicializa o jogo
+  </script>
+</body>
+</html>

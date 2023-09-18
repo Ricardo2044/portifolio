@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jogo de Adivinhação de Cores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #header {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #color-display {
+      font-size: 36px;
+      margin: 20px;
+    }
+
+    .color-box {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .color-box:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div id="header">Adivinhe a Cor!</div>
+  <div id="color-display"></div>
+  <div>
+    <div class="color-box" onclick="checkColor(this)"></div>
+    <div class="color-box" onclick="checkColor(this)"></div>
+    <div class="color-box" onclick="checkColor(this)"></div>
+    <div class="color-box" onclick="checkColor(this)"></div>
+    <div class="color-box" onclick="checkColor(this)"></div>
+    <div class="color-box" onclick="checkColor(this)"></div>
+  </div>
+
+  <script>
+    var colors = generateRandomColors(6);
+    var pickedColor = pickColor();
+    var colorDisplay = document.getElementById("color-display");
+    var colorBoxes = document.querySelectorAll(".color-box");
+
+    colorDisplay.textContent = pickedColor;
+
+    function generateRandomColors(num) {
+      var arr = [];
+      for (var i = 0; i < num; i++) {
+        arr.push(randomColor());
+      }
+      return arr;
+    }
+
+    function randomColor() {
+      var r = Math.floor(Math.random() * 256);
+      var g = Math.floor(Math.random() * 256);
+      var b = Math.floor(Math.random() * 256);
+      return "rgb(" + r + ", " + g + ", " + b + ")";
+    }
+
+    function pickColor() {
+      var randomIndex = Math.floor(Math.random() * colors.length);
+      return colors[randomIndex];
+    }
+
+    function checkColor(clickedBox) {
+      var clickedColor = clickedBox.style.backgroundColor;
+      if (clickedColor === pickedColor) {
+        alert("Parabéns! Você acertou!");
+        resetGame();
+      } else {
+        clickedBox.style.backgroundColor = "#232323";
+      }
+    }
+
+    function resetGame() {
+      colors = generateRandomColors(6);
+      pickedColor = pickColor();
+      colorDisplay.textContent = pickedColor;
+      for (var i = 0; i < colorBoxes.length; i++) {
+        colorBoxes[i].style.backgroundColor = colors[i];
+      }
+    }
+
+    resetGame(); // Inicializa o jogo
+  </script>
+</body>
+</html>
